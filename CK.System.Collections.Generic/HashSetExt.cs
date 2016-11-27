@@ -10,11 +10,11 @@ namespace CK.System.Collections.Generic
         /// <summary>
         /// Calls <see cref="HashSet{T}" /> constructor
         /// </summary>
-        public static HashSet<T> ToHashSet<T>(IEnumerable<T> items) => new HashSet<T>(items);
+        public static HashSet<T> ToHashSet<T>(this IEnumerable<T> items) => new HashSet<T>(items);
 
         /// <summary>
         /// Calls <see cref="HashSet{T}" /> constructor
         /// </summary>
-        public static HashSet<T> ToHashSet<T>(IEnumerable<T> items, IEqualityComparer<T> comparer) => new HashSet<T>(items, comparer);
+        public static HashSet<T> ToHashSet<T>(this IEnumerable<T> items, IEqualityComparer<T> comparer) => new HashSet<T>(items, comparer);
     }
 }
